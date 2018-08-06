@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ch-cn">
+ <head>
+  <meta charset="UTF-8">
+  <title>cool</title>
+   <style>
+ 
+	body{
+	 margin:0em;
+	 padding:0em; 
+	 background-image:url(8.jpg);
+	 background-size:1920px 1188px;
+	 background-repeat:no-repeat;
+	 opacity:0.99;	
+	}
+
+  .surface{
+    margin:50% 50%;
+  	margin-top:-50em;
+  	margin-left:50em;
+  	perspective:1000em;
+   }
+   .square{
+    position:absolute;
+	transform-style:preserve-3D;
+	transform:rotateX(-20deg) rotateY(-20deg);
+   }
+   .square div{
+    width:32em;
+	height:32em;
+	position:absolute;	
+   }
+   .front{
+    transform:translateZ(16em);
+	background-image:url(36.jpg);
+	background-size:32em 32em;
+   }
+   .back{
+    transform:translateZ(-16em);
+    background-image:url(13.jpg);
+	background-size:32em 32em;
+   }
+   .top{
+    transform:rotateX(90deg) translateZ(16em);
+    background-image:url(7.jpg);
+	background-size:32em 32em;
+   }
+   .bottom{
+    transform:rotateX(90deg) translateZ(-16em);
+	background-image:url(3.jpg);
+	background-size:32em 32em;
+   }
+   .left{
+    transform:rotateY(90deg) translateZ(16em);
+	background-image:url(39.jpg);
+	background-size:32em 32em;
+   }
+   .right{
+    transform:rotateY(90deg) translateZ(-16em);
+	background-image:url(5.jpg);
+	background-size:32em 32em;
+   }
+ @keyframes taobao{
+  0%{
+	transform:translateZ(-10em) rotateX(0) rotateY(0);
+	}
+	50%{
+	transform:translateZ(10em) rotateX(180deg) rotateY(180deg);
+	}
+	100%{
+	transform:translateZ(-10em) rotateX(360deg) rotateY(360deg);
+	}
+   } 
+   .animation-taobao{
+    animation:taobao 20s linear infinite;
+   }
+   </style>
+ </head>
+ <body>
+ 
+   <div class="surface">
+     <div class="square animation-taobao"> 
+	  <div class="front"></div>
+	  <div class="back"></div>
+	  <div class="top"></div>
+	  <div class="bottom"></div>
+	  <div class="left"></div>
+	  <div class="right"></div>
+	 </div>
+   </div>
+
+   <video src="tongren.mp4" controls loop>
+     <!-- <track src="tongren.mp4" kind="subtitles" default="default"> -->
+   </video>
+
+ </body>
+</html>
